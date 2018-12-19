@@ -3,4 +3,110 @@
 }
 body{
 	margin: 0;
+	font-family: Verdana, Geneva, sans-serif;
+}
+header{
+	min-height: 80vh;
+	background-image: linear-gradient(90deg,#131359,#3d3757,#090942);
+	position: relative;
+}
+header #first-content{
+	max-height: 80vh;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	z-index: 1;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color: white;
+}
+header #first-content strong{
+	display: block;
+}
+header #first-content strong{
+	margin:1em 0; 
+}
+h1{
+	font-weight: lighter;
+	font-size: 3.5em;
+	margin: 0;
+}
+h2{	
+	margin: 0;
+	margin-bottom: .7em;
+}
+@keyframes first-rotation{
+	from{transform: translate(-50%,-50%) rotate(45deg) scale(.9);}
+	to{transform: translate(-50%,-50%) rotate(45deg) scale(1);}
+}
+#animation-box{
+	opacity: .1;
+	left: 50%;
+	top:50%;
+	background: aqua;
+	box-shadow: 0 0 3px 3px aqua;
+	position: absolute;
+	height: 56.56vh;
+	width: 56.56vh;
+	z-index: 0;
+	animation: first-rotation 2s ease-in-out infinite alternate;
+}
+
+.gallery{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 2em 0;
+}
+.gallery h2{
+	width: 100%;
+	text-align: center;
+}
+figure{
+	width: 30%;
+	position: relative;
+	margin: 1em 0;
+	cursor: pointer;
+	transition-duration: .2s;
+}
+figure:hover{
+	transform: scale(1.05);
+}
+figure img{
+	width: 100%;
+}
+figcaption{
+	text-align: center;
+}
+figure:hover figcaption{
+	text-decoration: underline;
+}
+#skillset{
+	padding: 3em 2em;
+	color: white;
+	display: flex;
+	flex-wrap: wrap;
+	background-image: linear-gradient(90deg,#131359,#3d3757,#090942);
+	justify-content: space-around;
+}
+#skillset h2{
+	width: 100%;
+	text-align: center;
+}
+#skillset strong{
+	padding: .5em;
+	display: inline-block;
+	background-color: aqua;
+	opacity: .7;
+	color:#090942;
+	border-radius: .5em;
+}
+footer{
+	display: flex;
+	justify-content: space-between;
+	background-image: linear-gradient(90deg,#131359,#3d3757,#090942);
+	color:white;
+	padding: 2em;
+	font-size: 1.1em;
 }

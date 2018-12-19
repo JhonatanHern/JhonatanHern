@@ -1,3 +1,7 @@
 import style from "./main.css"
 
-console.log('OOF;')
+[...document.getElementsByClassName('burger')].forEach(element=>{
+	element.addEventListener('click',e=>{
+		element.parentNode.classList.toggle('active')
+	})
+})
